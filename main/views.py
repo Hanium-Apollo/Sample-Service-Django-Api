@@ -1,6 +1,6 @@
 from rest_framework import viewsets, mixins
 from .serializers import ScheduleSerializer
-from .models import Schedule
+from .models import schedule
 
 
 class ScheduleViewSet(
@@ -11,5 +11,5 @@ class ScheduleViewSet(
     mixins.DestroyModelMixin,
     mixins.RetrieveModelMixin,
 ):
-    queryset = Schedule.objects.all()
+    queryset = schedule.objects.all()
     serializer_class = ScheduleSerializer
